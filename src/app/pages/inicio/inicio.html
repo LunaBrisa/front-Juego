@@ -1,0 +1,40 @@
+<div class="inicio-container">
+    <!-- Fondo animado -->
+ <div class="deep-ocean-waves"></div>
+  <div class="sonar-radar"></div>
+  <div class="deep-ocean-glow"></div>
+
+ <div class="bubbles-container"></div>
+
+  <h1 class="inicio-title">⚓ PANEL DE COMANDO NAVAL</h1>
+
+  <div class="card-grid">
+    <!-- Tarjeta: Unirme a Batalla -->
+    <div class="inicio-card card-battle">
+      <h2>⚔️ Unirme a Batalla</h2>
+      <p>Ingresa a una partida y participa en combate naval.</p>
+      <button (click)=" irAPartida()"class="card-button pulse-button">Ingresar</button>
+    </div>
+
+    <!-- Tarjeta: Mis Torneos -->
+    <div class="inicio-card card-tournaments">
+      <h2>🏆 Mis Torneos</h2>
+      <p>Consulta tus torneos activos y resultados pasados.</p>
+      <button (click)="irATorneo()" class="card-button pulse-button">Ver Torneos</button>
+    </div>
+
+    <!-- Tarjeta: Crear Partida -->
+    <div class="inicio-card card-create">
+      <h2>🛠️ Crear Partida</h2>
+      <p>Organiza una nueva partida con tus propias reglas.</p>
+      <button (click)="irABatalla()" class="card-button pulse-button">Crear</button>
+    </div>
+
+    <!-- Tarjeta: Gráficas -->
+    <div class="inicio-card card-graphs">
+      <h2>📊 Gráficas</h2>
+      <p>Visualiza estadísticas del combate y rendimiento.</p>
+      <a routerLink="/graficas" class="card-button pulse-button">Ver Gráficas</a>
+    </div>
+  </div>
+</div>

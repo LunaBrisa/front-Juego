@@ -1,0 +1,47 @@
+<div class="welcome-container">
+  <!-- Fondo animado -->
+  <div class="ocean-background"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+
+  <!-- Estrellas, burbujas, radar, scanlines -->
+  <canvas class="stars" id="stars"></canvas>
+  <div class="bubbles" id="bubbles"></div>
+  <div class="radar"></div>
+  <div class="scanlines"></div>
+
+<!-- Contenido principal -->
+<div class="welcome-main-content">
+  <!-- Encabezado -->
+  <header class="welcome-header">
+    <h1 class="welcome-title">⚓ FLOTA DE COMBATE</h1>
+    <h2 class="welcome-subtitle">SISTEMA DE COMANDO NAVAL</h2>
+  </header>
+
+  <!-- Tarjeta de Misión -->
+  <section class="mission-briefing">
+    <h3 class="mission-title">🎯 MISIÓN ACTUAL</h3>
+    <p class="mission-text">Nuestra flota se encuentra patrullando las costas aliadas. La vigilancia activa está en curso mientras se espera la orden de ataque desde el comando central.</p>
+    <p class="mission-warning">⚠️ Prioridad alta: evitar infiltraciones enemigas.</p>
+  </section>
+
+  <!-- Botones -->
+  <nav class="welcome-actions">
+    <button (click)="irALogin()" class="action-button battle-button">INICIAR BATALLA</button>
+    <button (click)="irARegistro()" class="action-button register-button">NUEVO COMANDANTE</button>
+  </nav>
+
+  <!-- Mensajes animados -->
+  <div class="animated-message">
+    <p class="message-line">> Escaneando perímetro marítimo...</p>
+    <p class="message-line">> Comunicaciones cifradas activas</p>
+    <p class="message-line">> Estado: operativo</p>
+  </div>
+</div>
+
+  <!-- Pie de página -->
+  <footer class="welcome-footer">
+    <span>© FLOTA NAVAL | V 2.3.7</span>
+  </footer>
+</div>

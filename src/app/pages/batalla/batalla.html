@@ -1,0 +1,38 @@
+<div class="battle-container">
+  <h1 class="battle-title">⚓ BATALLA NAVAL</h1>
+  
+  <div class="boards-container">
+    <!-- Tablero del Jugador -->
+    <div class="board player-board">
+      <h2 class="board-title">🚢TU FLOTA</h2>
+      <div class="grid">
+        @for (row of rows; track row) {
+          <div class="grid-row">
+            @for (col of cols; track col) {
+              <div class="grid-cell">
+                <div class="cell-content"></div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+ 
+   
+    <!-- Tablero del Enemigo -->
+    <div class="board enemy-board">
+      <h2 class="board-title">🚢FLOTA ENEMIGA</h2>
+      <div class="grid">
+        @for (row of rows; track row) {
+          <div class="grid-row">
+            @for (col of cols; track col) {
+              <div class="grid-cell">
+                <div class="cell-content"></div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

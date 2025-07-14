@@ -1,1 +1,40 @@
-<p>login works!</p>
+<div class="login-container">
+  <!-- Fondo animado -->
+  <div class="ocean-background">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  
+  <!-- Burbujas flotantes -->
+  <div class="bubbles" id="bubbles"></div>
+  
+  <!-- Efecto radar -->
+  <div class="radar"></div>
+  
+  <!-- Estrellas/partículas -->
+  <div class="stars" id="stars"></div>
+  
+  <!-- Scanlines -->
+  <div class="scanlines"></div>
+  
+  <!-- Panel de login -->
+  <div class="login-panel animate-glow-in">
+    <h2 class="login-title">⚓ BATALLA NAVAL</h2>
+
+    <form (ngSubmit)="login()" #form="ngForm" novalidate>
+      <div class="input-group">
+        <label for="usuario">Correo</label>
+        <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" required placeholder="Ingrese su nombre..." />
+      </div>
+
+      <div class="input-group">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" [(ngModel)]="contrasena" required placeholder="••••••••" />
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">INICIAR BATALLA</button>
+       <button (click)="irARegistro()" class="login-link">¿No tienes una flota? <span>REGISTRATE</span></button>
+    </form>
+  </div>
+</div>

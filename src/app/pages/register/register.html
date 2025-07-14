@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="register-container">
+  <!-- Fondo animado -->
+  <div class="ocean-background">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  
+  <!-- Burbujas flotantes -->
+  <div class="bubbles" id="bubbles"></div>
+  
+  <!-- Efecto radar -->
+  <div class="radar"></div>
+  
+  <!-- Estrellas/partículas -->
+  <div class="stars" id="stars"></div>
+  
+  <!-- Scanlines -->
+  <div class="scanlines"></div>
+  
+  <!-- Panel de registro -->
+  <div class="register-panel animate-glow-in">
+    <h2 class="register-title">⚓ NUEVO COMANDANTE</h2>
+
+    <form (ngSubmit)="register()" #registerForm="ngForm" novalidate>
+      <div class="input-group">
+        <label for="usuario">NOMBRE DE COMANDANTE</label>
+        <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" required placeholder="Ej: Capitán Ahab" />
+      </div>
+
+      <div class="input-group">
+        <label for="email">CÓDIGO DE COMUNICACIONES</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="Ej: comandante@flota.com" />
+      </div>
+
+      <div class="input-group">
+        <label for="contrasena">CLAVE SECRETA</label>
+        <input type="password" id="contrasena" name="contrasena" [(ngModel)]="contrasena" required placeholder="••••••••" />
+      </div>
+
+      <div class="input-group">
+        <label for="confirmarContrasena">CONFIRMAR CLAVE</label>
+        <input type="password" id="confirmarContrasena" name="confirmarContrasena" [(ngModel)]="confirmarContrasena" required placeholder="••••••••" />
+      </div>
+
+      <div class="actions">
+        <button type="submit" [disabled]="registerForm.invalid">REGISTRAR FLOTA</button>
+        <button (click)="irALogin()" class="login-link">¿Ya tienes una flota? <span>INICIAR BATALLA</span></button>
+      </div>
+    </form>
+  </div>
+</div>
